@@ -35,7 +35,7 @@ namespace Selenium {
             succesInfoLabel = driver.FindElement(By.Id("success"));
             Assert.AreEqual("The message has been saved", succesInfoLabel.Text);
             messageNumberLabel = driver.FindElement(By.Id("messageNumber"));
-            Assert.AreEqual("You have 1 message", messageNumberLabel.Text);
+            Assert.AreEqual("You have 1 messages", messageNumberLabel.Text);
         }
 
         [TestCleanup]
