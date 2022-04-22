@@ -64,13 +64,13 @@ namespace Selenium {
             ClickTheButton();
             errorMessage = driver.FindElement(By.ClassName("field-validation-error"));
             Assert.AreEqual("Email is Required", errorMessage.Text);
-            errorBanner = driver.FindElement(By.ClassName("validation-summary-error"));
+            errorBanner = driver.FindElement(By.ClassName("validation-summary-errors"));
             Assert.AreEqual("Email is Required", errorBanner.Text);
         }
 
         [TestCleanup]
         public void CloseTheDriver() {
-            //driver.Close();
+            driver.Close();
         }
     }
 }
